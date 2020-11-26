@@ -86,5 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
+$_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
